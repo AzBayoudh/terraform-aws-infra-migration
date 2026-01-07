@@ -1,0 +1,12 @@
+# Terraform state (SENSITIVE)
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Build artifacts
+*.zip
+
+# macOS
+.DS_Store
