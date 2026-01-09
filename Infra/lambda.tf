@@ -14,4 +14,12 @@ resource "aws_lambda_function" "existing_lambda_function" {
 
   filename         = data.archive_file.lambda_zip.output_path
   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
+
+  lifecycle {
+  ignore_changes = [
+    filename,
+    source_code_hash
+  ]
+ }
+
 }
