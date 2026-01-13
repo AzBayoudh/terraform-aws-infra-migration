@@ -1,5 +1,9 @@
 resource "aws_s3_bucket" "existing_cloud_resume_bucket" {
   bucket = "azizaws.com"
+
+  lifecycle {
+   prevent_destroy = true
+  }
 }       
 
 resource "aws_s3_bucket_website_configuration" "cloud_resume_site" {
