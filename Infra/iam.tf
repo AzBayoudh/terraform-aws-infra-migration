@@ -32,7 +32,6 @@ resource "aws_iam_role_policy" "dynamo_api_access_inline" {
 }
 
 
-
 #  Managed policy attachment (customer-managed) that my CLI listed as attached
 resource "aws_iam_role_policy_attachment" "lambda_basic_execution_attached" {
   role       = aws_iam_role.lambda_existing_role.name

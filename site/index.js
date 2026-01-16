@@ -2,7 +2,7 @@ async function updateCounter() {
    
         const response = await fetch("https://pg6x3fakjymykbkgpydf7ngpoy0aajzp.lambda-url.us-east-1.on.aws/");
         const data = await response.text();
-        document.getElementById("view-count").innerText = views;
+        document.getElementById("view-count").innerText = data;
 }
 
 updateCounter();
